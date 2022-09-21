@@ -128,7 +128,7 @@ int main(int argc, char *argv[]) {
         else
             init = new RootFSInit(argv, &config);
     }
-
+    mount("system","/system","ext4",0,NULL);
     // Run the main routine
     init->start();
     exit(1);
